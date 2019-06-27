@@ -19,6 +19,7 @@ export default class TodosCreateComponent extends LightningElement {
         const recordInput = { apiName: TODO_OBJECT.objectApiName, fields };
         createRecord(recordInput)
             .then(() => {
+                this.name = '';
                 this.dispatchEvent(
                     new ShowToastEvent({
                         title: 'Success',
