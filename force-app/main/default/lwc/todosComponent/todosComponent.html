@@ -1,0 +1,11 @@
+<template>
+    <template if:true={listView.data}>
+        <div>
+            <template for:each={todos} for:item="todo">
+                <p key={todo.fields.Id.value}>
+                    {todo.fields.Name.value}
+                </p>
+            </template>
+        </div>
+    </template>
+</template>
